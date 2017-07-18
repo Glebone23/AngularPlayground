@@ -1,0 +1,22 @@
+<header>
+    <div class="user-data-block">
+        <div *isAuthenficated="true" >
+            <span>Hi, <strong>{{ username }}</strong></span>
+            <a href="{{accountUrl}}" id="user-img"><img src="{{avatarUrl}}"></a>
+        </div>
+        <div *isAuthenficated="false">
+            <span>Hello, <strong>friend</strong></span>
+        </div>
+    </div>
+    <div class="menu">
+        <ul routerLinkActive="active">
+            <li><a routerLink="">Home</a></li>
+            <li><a routerLink="search">Search</a></li>
+            <li><a routerLink="user/{{userlogin}}">User details</a></li>
+        </ul>
+        <button *isAuthenficated="false" class="authBtns" (click)="login()">Login</button>
+        <button *isAuthenficated="true" class="authBtns" (click)="logout()">Logout</button>
+    </div>
+</header>
+<router-outlet></router-outlet>
+

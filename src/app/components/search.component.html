@@ -1,0 +1,22 @@
+<h1 style="text-align: center">SEARCH</h1>
+<form (submit)="searchUsers(name.value)">
+    <input (keyup)="searchUsers(name.value)" #name type="text" name="users" placeholder="USERNAME">
+</form>
+<br>
+<hr>
+<button id="changeView" (click)="changeView()">Change for {{textDivTable}} View</button>
+<ul class="usersList" *ngIf="divDisplay">
+    <li *ngFor="let user of usersArray">
+        <a href="{{user.html_url}}" target="_blank"><img src="{{user.avatar_url}}" alt="{{user.login}}"></a>
+        <a href="{{user.html_url}}" class="linkHref" target="_blank">{{user.login}}</a>
+        <a href="/user/{{user.login}}" class="detailsLink">Details >> </a>
+    </li>
+</ul>
+<table *ngIf="tableDisplay">
+    <tr *ngFor="let user of usersArray">
+        <td><a href="{{user.html_url}}" target="_blank"><img src="{{user.avatar_url}}" alt="{{user.login}}"></a></td>
+        <td><a href="{{user.html_url}}" class="linkHref" target="_blank">{{user.login}}</a></td>
+        <td><a href="/user/{{user.login}}" class="detailsLink">Details >> </a></td>
+    </tr>
+</table>
+<span>{{message}}</span>

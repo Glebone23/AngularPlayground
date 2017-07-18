@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { GetService } from '../get.servise';
+import { GetService } from '../services/get.service';
 import {isNullOrUndefined} from 'util';
 
 @Component({

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GetService } from '../get.servise';
+import { GetService } from '../services/get.service';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from 'angularfire2/auth';
 

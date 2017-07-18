@@ -8,7 +8,7 @@ import { HomeComponent } from './components/home.component';
 import { SearchComponent } from './components/search.component';
 import { UserDetailsComponent } from './components/user.details.component';
 import { AuthCheckDirective } from './directives/auth.check.directive';
-import { GetService } from './get.servise';
+import { GetService } from './services/get.service';
 
 import { routing } from './app.routing';
 
